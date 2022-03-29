@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background_gradient">
+
+    <ImageView
+        android:id="@+id/foguete"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:background="@color/transparente"
+        android:src="@drawable/foguete"/>
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/foguete"
+        android:layout_centerHorizontal="true"
+        android:text="@string/for_developers"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:fontFamily="@font/roboto_medium"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titulo"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/texto"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_light"/>
+
+    <Button
+        android:layout_width="122dp"
+        android:layout_height="56dp"
+        android:layout_above="@id/bolinhas"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:text="@string/buy_now"
+        android:textColor="@color/coral"
+        android:fontFamily="@font/roboto_medium"/>
+    
+    <RelativeLayout
+        android:id="@+id/bolinhas"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/bolinha1"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_toLeftOf="@id/bolinha2"
+            android:background="@drawable/bolinhas_50" />
+        <ImageView
+            android:id="@+id/bolinha2"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/bolinhas"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/bolinha3"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_toRightOf="@id/bolinha2"
+            android:background="@drawable/bolinhas_50" />
+    </RelativeLayout>
+
+</RelativeLayout>
